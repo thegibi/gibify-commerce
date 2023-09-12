@@ -22,9 +22,11 @@ export default function Search() {
     const search = val.search as HTMLInputElement;
     const newParams = new URLSearchParams(searchParams.toString());
 
-    if (search.value) {
+    if (search.value)
+    {
       newParams.set('q', search.value);
-    } else {
+    } else
+    {
       newParams.delete('q');
     }
 
@@ -36,7 +38,7 @@ export default function Search() {
       <input
         type="text"
         name="search"
-        placeholder="Search for products..."
+        placeholder="Pesquise por produtos..."
         autoComplete="off"
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
