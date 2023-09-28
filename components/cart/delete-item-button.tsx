@@ -13,12 +13,13 @@ export default function DeleteItemButton({ item }: { item: CartItem }) {
 
   return (
     <button
-      aria-label="Remove cart item"
+      aria-label="Remover Items do Carrinho"
       onClick={() => {
         startTransition(async () => {
           const error = await removeItem(item.id);
 
-          if (error) {
+          if (error)
+          {
             // Trigger the error boundary in the root error.js
             throw new Error(error.toString());
           }

@@ -26,9 +26,11 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
 
   useEffect(() => {
     // Open cart modal when quantity changes.
-    if (cart?.totalQuantity !== quantityRef.current) {
+    if (cart?.totalQuantity !== quantityRef.current)
+    {
       // But only if it's not already open (quantity also changes when editing items in cart).
-      if (!isOpen) {
+      if (!isOpen)
+      {
         setIsOpen(true);
       }
 
@@ -39,7 +41,7 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
 
   return (
     <>
-      <button aria-label="Open cart" onClick={openCart}>
+      <button aria-label="Abrir Carrinho" onClick={openCart}>
         <OpenCart quantity={cart?.totalQuantity} />
       </button>
       <Transition show={isOpen}>
@@ -66,9 +68,9 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
           >
             <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl dark:border-neutral-700 dark:bg-black/80 dark:text-white md:w-[390px]">
               <div className="flex items-center justify-between">
-                <p className="text-lg font-semibold">My Cart</p>
+                <p className="text-lg font-semibold">Meu Carrinho</p>
 
-                <button aria-label="Close cart" onClick={closeCart}>
+                <button aria-label="Fechar Carrinho" onClick={closeCart}>
                   <CloseCart />
                 </button>
               </div>
@@ -76,7 +78,7 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
               {!cart || cart.lines.length === 0 ? (
                 <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
                   <ShoppingCartIcon className="h-16" />
-                  <p className="mt-6 text-center text-2xl font-bold">Your cart is empty.</p>
+                  <p className="mt-6 text-center text-2xl font-bold">Seu Carrinho está Vazio.</p>
                 </div>
               ) : (
                 <div className="flex h-full flex-col justify-between overflow-hidden p-1">
@@ -85,7 +87,8 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                       const merchandiseSearchParams = {} as MerchandiseSearchParams;
 
                       item.merchandise.selectedOptions.forEach(({ name, value }) => {
-                        if (value !== DEFAULT_OPTION) {
+                        if (value !== DEFAULT_OPTION)
+                        {
                           merchandiseSearchParams[name.toLowerCase()] = value;
                         }
                       });
@@ -153,18 +156,18 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                     })}
                   </ul>
                   <div className="py-4 text-sm text-neutral-500 dark:text-neutral-400">
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 dark:border-neutral-700">
+                    {/* <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 dark:border-neutral-700">
                       <p>Taxes</p>
                       <Price
                         className="text-right text-base text-black dark:text-white"
                         amount={cart.cost.totalTaxAmount.amount}
                         currencyCode={cart.cost.totalTaxAmount.currencyCode}
                       />
-                    </div>
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
-                      <p>Shipping</p>
-                      <p className="text-right">Calculated at checkout</p>
-                    </div>
+                    </div> */}
+                    {/* <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
+                      <p>Entrega</p>
+                      <p className="text-right">A calcular no Checkout</p>
+                    </div> */}
                     <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
                       <p>Total</p>
                       <Price
@@ -178,7 +181,7 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                     href={cart.checkoutUrl}
                     className="block w-full rounded-full bg-blue-600 p-3 text-center text-sm font-medium text-white opacity-90 hover:opacity-100"
                   >
-                    Proceed to Checkout
+                    Ir para o Checkout
                   </a>
                 </div>
               )}

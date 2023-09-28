@@ -19,19 +19,20 @@ export default function EditItemQuantityButton({
 
   return (
     <button
-      aria-label={type === 'plus' ? 'Increase item quantity' : 'Reduce item quantity'}
+      aria-label={type === 'plus' ? 'Adicionar Quantidade do Carrinho' : 'Diminuir Quantidade do Carrinho'}
       onClick={() => {
         startTransition(async () => {
           const error =
             type === 'minus' && item.quantity - 1 === 0
               ? await removeItem(item.id)
               : await updateItemQuantity({
-                  lineId: item.id,
-                  variantId: item.merchandise.id,
-                  quantity: type === 'plus' ? item.quantity + 1 : item.quantity - 1
-                });
+                lineId: item.id,
+                variantId: item.merchandise.id,
+                quantity: type === 'plus' ? item.quantity + 1 : item.quantity - 1
+              });
 
-          if (error) {
+          if (error)
+          {
             // Trigger the error boundary in the root error.js
             throw new Error(error.toString());
           }

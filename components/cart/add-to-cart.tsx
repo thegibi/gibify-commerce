@@ -28,12 +28,12 @@ export function AddToCart({
   const title = !availableForSale
     ? 'Out of stock'
     : !selectedVariantId
-    ? 'Please select options'
-    : undefined;
+      ? 'Please select options'
+      : undefined;
 
   return (
     <button
-      aria-label="Add item to cart"
+      aria-label="Adicionar ao Carrinho"
       disabled={isPending || !availableForSale || !selectedVariantId}
       title={title}
       onClick={() => {
@@ -43,7 +43,8 @@ export function AddToCart({
         startTransition(async () => {
           const error = await addItem(selectedVariantId);
 
-          if (error) {
+          if (error)
+          {
             // Trigger the error boundary in the root error.js
             throw new Error(error.toString());
           }
@@ -62,7 +63,7 @@ export function AddToCart({
       <div className="absolute left-0 ml-4">
         {!isPending ? <PlusIcon className="h-5" /> : <LoadingDots className="mb-3 bg-white" />}
       </div>
-      <span>{availableForSale ? 'Add To Cart' : 'Out Of Stock'}</span>
+      <span>{availableForSale ? 'Adicionar ao Carrinho' : 'Fora de Estoque'}</span>
     </button>
   );
 }
