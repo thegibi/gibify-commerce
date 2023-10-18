@@ -43,7 +43,7 @@ export default async function Footer() {
           <a
             className="flex h-8 w-max flex-none items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
             aria-label="Instagram do Gibify Commerce"
-            href="https://www.instagram.com/gibify.commerce/"
+            href="https://www.instagram.com/gibifydev/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -51,7 +51,7 @@ export default async function Footer() {
               <InstagramIcon />
             </span>
             <hr className="h-full border-r border-neutral-200 dark:border-neutral-700" />
-            <span className="px-3">@gibify.commerce</span>
+            <span className="px-3">@gibify.dev</span>
           </a>
           <a
             className="flex h-8 w-max flex-none items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
