@@ -41,30 +41,22 @@ export default async function Footer() {
         </Suspense>
         <div className="md:ml-auto flex gap-1 md:flex-row flex-col">
           <a
-            className="flex h-8 w-max flex-none items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
+            className="flex h-8 w-8 p-2 items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
             aria-label="Instagram do Gibify Commerce"
-            href="https://www.instagram.com/gibifydev/"
+            href="https://www.instagram.com/gibify.dev/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="px-3">
-              <InstagramIcon />
-            </span>
-            <hr className="h-full border-r border-neutral-200 dark:border-neutral-700" />
-            <span className="px-3">@gibify.dev</span>
+            <InstagramIcon />
           </a>
           <a
-            className="flex h-8 w-max flex-none items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
+            className="flex h-8 w-8 p-2 items-center justify-center rounded-md border border-neutral-200 bg-white text-xs text-black dark:border-neutral-700 dark:bg-black dark:text-white"
             aria-label="WhatsApp do Gibify Commerce"
-            href="https://wa.me/5548984030770"
+            href="https://wa.me/5548998463847"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="px-3">
-              <WhatsappIcon />
-            </span>
-            <hr className="h-full border-r border-neutral-200 dark:border-neutral-700" />
-            <span className="px-3">47 9 8403-1398</span>
+            <WhatsappIcon />
           </a>
         </div>
       </div>

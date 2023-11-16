@@ -6,7 +6,7 @@ import { Suspense } from 'react';
 export const runtime = 'edge';
 
 export const metadata = {
-  description: 'Compras on-line de um jeito simples e rápido.',
+  description: 'Vender online de um jeito simples, seguro e rápido.',
   openGraph: {
     type: 'website'
   }
