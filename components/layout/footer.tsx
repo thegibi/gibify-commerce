@@ -67,7 +67,7 @@ export default async function Footer() {
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} Todos os direitos reservados.
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
-          <p>CNPJ 43.954.898/0001-40</p>
+          <p>CNPJ 99.999.999/0001-99</p>
           <p className="md:ml-auto">
             Developed by{' '}
             <a
